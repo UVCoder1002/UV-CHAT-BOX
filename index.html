@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="app.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UV-CHAT-BOX</title>
+  </head>
+  <body>
+    <div id="app-container" class="flex-column">
+      <header>
+        <div class="container flex-column flex-center">
+          <h1>UV-CHAT-BOX</h1>
+          <h4 class="dark-text">A PLACE WHERE ONLY WE EXIST</h4>
+        </div>
+      </header>
+      <div
+        id="main-content"
+        class="container flex-grow-1 flex-column flex-center"
+      >
+        <section id="login" class="flex-column">
+          <h2 class="text-center" style="color: black;">
+            Setting up things for you
+          </h2>
+          <form action="" id="loginform" class="flex">
+            <input
+              type="text"
+              name="username"
+              id="usernameInput"
+              placeholder="username"
+              class="flex-grow-1"
+            />
+            <button id="loginBtn">Chat!</button>
+          </form>
+        </section>
+        <section id="chat" class="hidden">
+          <div id="message list">
+            <div id="message-left">
+              <div class="message-details">
+                <p class="name">Urvashi</p>
+                <p class="date">2/8/20</p>
+              </div>
+              <div class="message-content">
+                <p>Hey! How do you do today?</p>
+              </div>
+            </div>
+            <div id="message-right">
+              <div class="message-details">
+                <p class="date">2/8/20</p>
+              </div>
+              <div class="message-content">
+                <p>Hey! How do you do today?</p>
+              </div>
+            </div>
+          </div>
+          <form action="" id="message-form" class="flex">
+            <input
+              type="text"
+              name="message"
+              id="message-content"
+              placeholder="enter your message"
+              class="flex-grow-1"
+            />
+            <button id="send">Send</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
