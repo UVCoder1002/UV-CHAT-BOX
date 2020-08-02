@@ -14,11 +14,8 @@
           <h4 class="dark-text">A PLACE WHERE ONLY WE EXIST</h4>
         </div>
       </header>
-      <div
-        id="main-content"
-        class="container flex-grow-1 flex-column flex-center"
-      >
-        <section id="login" class="flex-column">
+      <div id="main-content" class="container flex-grow-1 flex-column">
+        <section id="login" class="hidden">
           <h2 class="text-center" style="color: black;">
             Setting up things for you
           </h2>
@@ -33,10 +30,10 @@
             <button id="loginBtn">Chat!</button>
           </form>
         </section>
-        <section id="chat" class="hidden">
-          <div id="message list">
+        <section id="chat" class="flex-grow-1 flex-column">
+          <div id="message-list" class="flex-grow-1">
             <div id="message-left">
-              <div class="message-details">
+              <div class="message-details flex">
                 <p class="name">Urvashi</p>
                 <p class="date">2/8/20</p>
               </div>
@@ -45,15 +42,18 @@
               </div>
             </div>
             <div id="message-right">
-              <div class="message-details">
+              <div class="message-details" class="flex">
                 <p class="date">2/8/20</p>
               </div>
               <div class="message-content">
                 <p>Hey! How do you do today?</p>
               </div>
             </div>
+            <p class="secondary-text mb-2 text-center">
+              Urvashi joined the chat...
+            </p>
           </div>
-          <form action="" id="message-form" class="flex">
+          <form action="" id="loginform" class="flex">
             <input
               type="text"
               name="message"
@@ -61,7 +61,7 @@
               placeholder="enter your message"
               class="flex-grow-1"
             />
-            <button id="send">Send</button>
+            <button id="loginBtn">Send</button>
           </form>
         </section>
       </div>

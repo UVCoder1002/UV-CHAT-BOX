@@ -64,7 +64,8 @@ header .container {
   color: var(--primary-blue);
 }
 .secondary-text {
-  color: var(--baby-pink);
+  color: var(--dark-grey);
+  font-weight: 700;
 }
 .light-text {
   color: var(--teal);
@@ -84,11 +85,73 @@ h4 {
   font-weight: 600;
   font-style: italic;
 }
+#main-content {
+  justify-content: center;
+  width: 100%;
+}
+/*LOGIN FORM*/
 #login {
   background-color: var(--primary-pink);
   padding: 40px 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin-top: -100px;
 }
+/*FORM ATTRIBUTES*/
 input {
+  padding: 10px 20px;
+  background-color: var(--baby-pink);
+  color: var(--black);
+  font-weight: 700;
+  border: solid var(--black);
+}
+#loginform {
+  margin-top: 10px;
+  width: 100%;
+}
+#loginBtn {
+  cursor: pointer;
+  background-color: var(--lime);
+  height: 40px;
+  padding: 0 15px;
+}
+#loginBtn:hover {
+  transform: rotateZ(360deg);
+  transition: transform 300ms;
+}
+/*CHAT*/
+#chat {
+  background-color: white;
+  padding: 25px;
+  margin: 25px 0;
+  overflow-y: scroll;
+}
+#message-left {
+  background-color: var(--dark-primary-blue);
+  color: white;
+  padding: 10px;
+  margin-right: 20%;
+  margin-bottom: 25px;
+  width: 60%;
+}
+#message-right {
+  background-color: var(--lime);
+  color: black;
+  padding: 10px;
+  margin-left: 40%;
+  margin-bottom: 25px;
+  width: 60%;
+}
+.message-details {
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.date {
+  font-weight: 700;
+  font-size: 21px;
+}
+.name {
+  font-weight: 800;
+}
+.message-content {
+  font-weight: 400;
 }
