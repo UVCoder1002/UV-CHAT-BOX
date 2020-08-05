@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="app.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UV-CHAT-BOX</title>
+  </head>
+  <body>
+    <div id="app-container" class="flex-column">
+      <header>
+        <div class="container flex-column flex-center">
+          <h1>UV-CHAT-BOX</h1>
+          <h4 class="dark-text">A PLACE WHERE ONLY WE EXIST</h4>
+        </div>
+      </header>
+      <div id="main-content" class="container flex-grow-1 flex-column">
+        <section id="login">
+          <h2 class="text-center" style="color: black;">
+            Setting up things for you
+          </h2>
+          <form action="" id="loginform" class="flex">
+            <input
+              type="text"
+              name="username"
+              id="usernameInput"
+              placeholder="username"
+              class="flex-grow-1"
+            />
+            <button id="loginBtn">Chat!</button>
+          </form>
+        </section>
+        <section id="chat" class="flex-column hidden flex-grow-1">
+          <div id="message-list" class="flex-grow-1"></div>
+          <form action="" id="loginform" class="flex">
+            <input
+              type="text"
+              name="message"
+              id="messageInput"
+              placeholder="enter your message"
+              class="flex-grow-1"
+            />
+            <button id="sendBtn">Send</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
