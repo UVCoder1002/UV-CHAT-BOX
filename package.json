@@ -1,0 +1,30 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "chat app using HTML CSS Js ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UVCoder1002/UV-CHAT-BOX.git"
+  },
+  "keywords": [
+    "chat",
+    "HTML",
+    "Node",
+    "CSS",
+    "Js"
+  ],
+  "author": "Urvashi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UVCoder1002/UV-CHAT-BOX/issues"
+  },
+  "homepage": "https://github.com/UVCoder1002/UV-CHAT-BOX#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

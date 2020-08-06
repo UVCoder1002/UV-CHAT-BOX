@@ -1,4 +1,4 @@
-const messageTypes = { LEFT: "left", RIGHT: "right", LOGIN: login };
+const messageTypes = { LEFT: "left", RIGHT: "right", LOGIN: "login" };
 
 //CHAT STUFF
 
@@ -10,11 +10,29 @@ const chatWindow = document.getElementById("chat");
 
 //LOGIN STUFF
 let username = "";
+let message;
 const loginBtn = document.getElementById("loginBtn");
 const loginWindow = document.getElementById("login");
 const usernameInput = document.getElementById("usernameInput");
 
 const messages = []; //AUTHOR,DATE,CONTENT,TYPE
+
+var socket = io();
+
+socket.on("message", (message) => {
+  console.log(message);
+  if (message.type !== messageTypes.LOGIN) {
+    if (message.author === username) {
+      message.type = messageTypes.RIGHT;
+    } else {
+      message.type = messageTypes.LEFT;
+    }
+  }
+
+  messages.push(message);
+  displayMessages();
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+});
 
 //TAKE IN MESSAGE AND RETURN MESSAGE HTML
 
@@ -59,28 +77,35 @@ loginBtn.addEventListener("click", (e) => {
     return console.log("cannot be empty..");
   }
   username = usernameInput.value;
-  messages.push({
+  message = {
     author: username,
     type: messageTypes.LOGIN,
-  });
+  };
+  socket.emit("message", message);
   //HIDE LOGIN PAGE AND SHOW CHAT WINDOW
   loginWindow.classList.add("hidden");
   chatWindow.classList.remove("hidden");
   //SHOW THE MESSAGES
-  displayMessages();
 });
 //SENDBUTTON
 sendBtn.addEventListener("click", (e) => {
   e.preventDefault();
+
+  const date = new Date();
+  const day = date.getDay();
+  const month = ("0" + date.getMonth() + 1).slice(-2);
+  const year = date.getFullYear();
+  const dateString = `${day}/${month}/${year}`;
   if (messageInput.value) {
-    messages.push({
+    message = {
       author: usernameInput.value,
       content: messageInput.value,
-      date: new Date(),
+      date: dateString,
       type: messageTypes.RIGHT,
-    });
+    };
+    // messages.push(message);
   }
-  displayMessages();
+  socket.emit("message", message);
   messageInput.value = "";
   chatWindow.scrollTop = chatWindow.scrollHeight;
 });
