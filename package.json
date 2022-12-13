@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/UVCoder1002/UV-CHAT-BOX#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "socket.io": "^2.3.0"
   }
 }
